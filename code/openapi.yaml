@@ -1,0 +1,23 @@
+openapi: 3.1.0
+info:
+  title: Flask Hello World API
+  description: Simple Flask API for Hello World
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+paths:
+  /hw/healthCheck:
+    get:
+      summary: Health Check Endpoint
+      description: Endpoint to check the health of the API
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Hello, World!!!
+      operationId: healthCheck
+      tags:
+        - Hello World
